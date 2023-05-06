@@ -1,0 +1,78 @@
+<% layout('layouts/boilerplate') %>  
+
+<div class="row" style="font-family: consolas;">
+    <h1 class="text-center" style="color: rgb(255, 255, 255) ;
+    -webkit-text-fill-color: rgb(255, 255, 255) ;">Add new Question</h1>
+    <div class="col-6 offset-3">
+        <form action="/col" method="POST" >
+            <div class="mb-3">
+                <label class="form-label" for="link" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Link :</label>
+                <input class="form-control" type="text" id="link" name="link" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="rating" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Rating :</label>
+                <input class="form-control" type="text" id="rating" name="rating" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="platform" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Platform :</label>
+                <input class="form-control" type="text" id="platform" name="platform" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="qname" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Question Name :</label>
+                <input class="form-control" type="text" id="qname" name="qname" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+			
+            <button class="mb-3 btn btn-success">Submit</button>
+        </form>
+        <a class="mb-3 btn btn-dark" href="/col">All Questions</a>
+    </div>
+</div>
+
+
+
+<<div class="container-fluid" style="height: calc(100% - 260px);min-height:689px;margin-top:60px;background: linear-gradient(90deg, rgba(0,50,60,1) 5%, rgba(9,114,121,1) 50%, rgba(0,50,60,1) 95%);"">
+	<div class="container" >
+		<div class="row" style="margin-top: 5%; color: white;">
+			<div style="width: 50% ; margin:40px auto;">
+				<form action="/col" method="POST">
+					<!--<input class="form-control" type="text" placeholder="suggestion" name="comment[text]">-->
+					<div class="form-group">
+						<label for="to1" style="font-size: 22px;font-family:Paprika">Link:</label>
+						<input id="to1" class="form-control" type="text" placeholder="link" name="link" style="height: 48px;">
+					</div>
+					<div class="form-group">
+						<label for="to2" style="font-size: 22px;font-family:Paprika">Rating:</label>
+						<input id="to2" class="form-control" type="text" placeholder="rating" name="rating" style="height: 48px;">
+					</div>
+					<div class="form-group">
+						<label for="to3" style="font-size: 22px;font-family:Paprika">Platform:</label>
+						<input id="to3" class="form-control" type="text" placeholder="platform" name="platform" style="height: 48px;">
+					</div>
+					<div class="form-group">
+						<label for="to4" style="font-size: 22px;font-family:Paprika">Question Name:</label>
+						<input id="to4" class="form-control" type="text" placeholder="sum it!!" name="qname" style="height: 48px;">
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary btn-block btn-lg">Submit!!</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

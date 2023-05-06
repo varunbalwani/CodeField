@@ -1,0 +1,216 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	position: relative;
+	overflow-x: hidden;
+}
+body{
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+#materiallist{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 200;
+}
+#materialhead{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 800;
+    
+}
+
+#myCarousel{
+	padding-bottom: 20px;
+}
+#myNavbar{
+	font-size: 20px;
+	min-height: 75px;
+	padding-top: 10px;
+}
+.navbar-brand{
+	font-size: 25px !important;
+}
+.navbar{
+	min-height: 65px;
+	padding-top: 10px;
+}
+/*make the image fully responsive*/
+.carousel-inner img{
+	height: 100%;
+	width: 100%;
+}
+.thumbnail{
+    padding: 0%;
+}
+.thumbnail img{
+    width: 100%;
+}
+.thumbnail .caption-full{
+    padding: 9px;
+}
+#delet-form{
+    display: inline;
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 420px;
+	padding: 15px;
+	margin: auto;
+  }
+  
+  .form-label-group {
+	position: relative;
+	margin-bottom: 1.5rem;
+  }
+  
+  .form-label-group > input,
+  .form-label-group > label {
+	height: 5.125rem;
+	padding: 1rem;
+  }
+  
+  .form-label-group > label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	margin-bottom: 0; /* Override default `<label>` margin */
+	line-height: 2.5;
+	color: #495057;
+	pointer-events: none;
+	cursor: text; /* Match the input under the label */
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	transition: all .1s ease-in-out;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+	padding-top: 1.25rem;
+	padding-bottom: .25rem;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) ~ label {
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	font-size: 18px;
+	color: #777;
+  }
+  .form-control{
+	  font-size: 22px;
+  }
+  #checkeforrember{
+	  font-size: 20px;
+  }
+  #noaccount{
+	  color: #5407a1;
+  }
+  .jumbotron p {
+	  font-size: 18px;
+  }
+  .love{
+	  background: red;
+  }
+  #bt:hover{
+	background: #0d19a3;
+}
+.btn-info{
+	background: #4056a1;
+	font-family: 'Indie Flower', cursive;
+	font-weight: 800;
+	font-size: 17px;
+}
+.btn-link{
+  background: #84ceeb;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 800;
+}
+.btn-link:hover{
+	background: #84ceeb;
+	text-decoration: none;
+	color: black;
+	font-family: 'Indie Flower', cursive;
+	font-weight: 800;
+}
+.btn-info:hover{
+	background: #c5cbe3;
+	color: #4056a1;
+	font-family: 'Indie Flower', cursive;
+	font-weight: 800;
+	font-size: 17px;
+}
+.navbar-inverse{
+	background: rgba(43,43,43,0.8);
+	font-weight: 800;
+}
+#fb:hover{
+	background: #3b5998;
+	transition: background 0.4s;
+}
+#instagram:hover{
+   background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+   transition: background 0.4s;
+}
+#github:hover{
+	background: #7DBBE6;
+	transition: background 0.4s;
+}
+#mail:hover{
+	background: #B23121;
+	transition: background 0.4s;
+}
+.btn-dark{
+	background: #f2f2f2;
+	font-size: 16px;
+	color: #474b4f;
+}
+.btn-yup{
+	background: #cf6679;
+	color: white;
+}
+#colsh{
+	background: #6b7b8c;
+}
+.btn-own{
+	background: #79a7d3;	
+}
+.btn-own:hover{
+	background:#6883bc;
+}
+a:hover{
+	text-decoration: none;
+}
+#materiallist:hover{
+	font-size: 30px;
+}
+.nav navbar-nav{
+	font-family: 'Josefin Sans', sans-serif;
+}
+#noaccount:hover{
+	font-size: 20px;
+}

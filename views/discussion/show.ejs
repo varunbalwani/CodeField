@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %>  
+
+<div class="row">
+    <div class="col-8 offset-2 " style="font-family: consolas;">
+        <h1 class="text-white " style="text-align: center;" ><strong> <%= discussion.topic%> </strong></h1>
+        <div class="card mb-3 mt-3" style="border: 0px;">
+            <div class="card-body" style="background-color: rgb(14, 214, 228); ">
+                <h2 ><%= discussion.question%></h2>
+                <p class="text-muted">Asked by <%=discussion.author.username %></p>
+                <%if(currentUser && (discussion.author.id.equals(currentUser._id)||currentUser.role==='moderator')){%>
+                    <a class="btn btn-warning text-white" href="/discussions/<%=discussion._id%>/edit">Edit</a>
+                    <form id="delet-form" class="d-inline" action="/discussions/<%=discussion._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger ">Delete</button>
+                    </form>
+                <% } %>
+                <br>
+                    <a class="btn btn-large mt-2 text-white" style="background-color: rgb(39, 39, 193);" href="/discussions/<%=discussion._id%>/comments/new" >Add your Suggestion</a>
+            </div>
+        </div>
+        <% discussion.comments.forEach(function(comment){ %>
+            <div class="card mb-3 ">
+				<div class="card-body">
+					<h4><strong ><%= comment.topic%></strong></h4>
+					<h6>Submitted by: <%= comment.author.username%></h6>
+                    <h6 class="pull-right text-muted "  >Suggested on <%=comment.time1%></h6>
+					<br>
+                    <h4 class="card-text">  <%= comment.text %> </h4>
+                        <% if(currentUser && (comment.author.id.equals(currentUser._id)||currentUser.role==='moderator')){ %>
+                            <a class="btn btn-sm btn-warning text-white" href="/discussions/<%= discussion._id %>/comments/<%=comment._id %>/edit">Edit</a>
+                            <form id="delet-form" class="d-inline" action="/discussions/<%= discussion._id %>/comments/<%=comment._id %>?_method=DELETE" method="POST" >
+                                <button class="btn btn-sm btn-danger ">Delete</button>
+                            </form>
+                        <% } %>
+				</div>
+			</div>
+        <% }); %>
+    </div>
+</div>
+
+

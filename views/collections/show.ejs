@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %>  
+
+<div class="row">
+    <div class="col-8 offset-2 " style="font-family: consolas;">
+          <h2 class="text-white" style="text-align: center; " ><%=currentUser.username%>'s Question Collection</h2>
+          <table class="table text-white" style="font-size: 25px;">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Question</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Platform</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <%currentUser.col.forEach(function(mycol){%>
+                    <tr >
+                        <td scope="col"  style="font-size: 22px; "><a  class="text-white" href="<%= mycol.link %>"  id="li"><%= mycol.qname %></a></td>
+                        <td scope="col"  style="font-size: 22px; "><%= mycol.rating%></td>
+                        <td scope="col"  style="font-size: 22px; "><%= mycol.platform%></td>
+                        <td scope="col"  style="font-size: 22px; ">
+                            <form  action="/col/<%=mycol._id%>?_method=DELETE" method="POST">
+                                <button class="btn  btn-danger text-white" style="font-size: 20px;">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+          </table>
+          <div class="container">
+            <p style="text-align: center;">
+                <a href="/col/new" class="btn text-white" style="background-color: rgb(8, 71, 230);">Add Questions</a>
+            </p>
+            <p style="text-align: center;">
+                <a href="https://www.onlinegdb.com/online_c++_compiler" class="btn text-white " style="background-color: rgb(8, 71, 230);"">Practice Here</a>
+            </p>    
+        </div>
+    </div>
+</div>
+
+

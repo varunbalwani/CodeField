@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+    <div class="col-8 offset-2 " style="font-family: consolas;">
+        <h2 class="text-white" style="text-align: center;">Discussion</h2>
+        <h3 class="text-white" style="text-align: center;"> Ask Your Doubts and Help Each Other</h3>
+        <p style="text-align: center;">
+            <a class="btn btn-lg " style=" background-color: rgba(206, 220, 222, 0.7);" href="/discussions/new" >Create discussion</a>
+        </p>
+        <% discussion.forEach(function(allcol){%>
+            <div class="card mb-3 te" >
+                <div class="card-body" >
+                    <h4  class="card-title" ><strong><%= allcol.topic %> </strong></h4>
+                    <h5   class="card-text" ><%= allcol.question %></h5>
+                    <a href="/discussions/<%=allcol._id %>" class="btn btn-info"  >Discussion</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+    
+    

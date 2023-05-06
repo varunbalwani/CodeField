@@ -1,0 +1,24 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #dbc6a1;">
+    <div class="container-fluid">
+      <a class="navbar-brand"  >CodeFarm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+              <a class="nav-link "  href="/"><strong>Home</strong></a>
+            <a class="nav-link"  href="/materials"><strong>Coding Material</strong></a>
+            <a class="nav-link"  href="/discussions"><strong>Discussion-Portal</strong></a>
+            <a class="nav-link"  href="/col"><strong>Questions</strong></a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <% if(!currentUser) {%>
+            <a class="nav-link" id="nav" href="/login"><strong>Login</strong></a>
+            <a class="nav-link" id="nav" href="/register"><strong>Register </strong></a>
+            <% } else {%>
+            <a class="nav-link" id="nav" href="/logout"><strong>Logout </strong></a>
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

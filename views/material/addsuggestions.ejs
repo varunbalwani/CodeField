@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="row" style="font-family: consolas;">
+    <h1 class="text-center" style="color: rgb(255, 255, 255) ;
+    -webkit-text-fill-color: rgb(255, 255, 255) ;">Give Suggestion</h1>
+    <div class="col-6 offset-3">
+        <form action="/material/addsuggestions" method="POST" >
+            <div class="mb-3">
+                <label class="form-label" for="topic" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Topic</label>
+                <input class="form-control" type="text" id="topic" name="topic" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="suggestion" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Suggestion</label>
+                <textarea class="form-control" type="text" id="suggestion" name="suggestion" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>      
+            <button class="mb-3 btn btn-success">Submit</button>
+        </form>
+        <a class="mb-3 btn btn-dark" href="/materials">Back to Material</a>
+		<% suggestion.forEach(function(comment){ %>
+			<div class="card mb-3 ">
+				<div class="card-body">
+				  <h5 class="card-title"><strong> <%= comment.topic %> </strong></h5>
+					<p class="card-text">Suggestion: <%=comment.text %></p>
+					<%  if( currentUser && comment.author.equals(currentUser._id)||currentUser.role==='moderator')  {%>
+						<form id="delet-form" action="addsuggestions/<%= comment._id %>?_method=DELETE" method="POST" >
+							<button class="btn btn-sm btn-danger ">Delete</button>
+						</form>
+					<% } %> 
+				</div>
+			</div>
+		<% }); %>
+    </div>
+</div>
+    
+
+    

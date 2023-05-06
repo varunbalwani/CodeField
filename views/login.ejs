@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>  
+
+<div class="container d-flex justify-content-center align-items-center mt-3 mb-3 ">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow "  style=" border: 0px; backdrop-filter: blur(14px);
+            background-color: rgba(255, 255, 255, 0.5);">
+                <img src="https://cdn.pixabay.com/photo/2018/06/08/00/48/developer-3461405_960_720.png" alt=".." class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Login</h5>
+                    <form action="/login" method="POST" class="validated-form" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" autofocus required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-block">Login</button>
+						<br>
+						<label>Don't have an account? <a href="/register" id="noaccount">Join</a></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

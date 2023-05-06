@@ -1,0 +1,21 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+.intro{
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgba(255,255,255,0.6);
+}
+.btn{
+    background-color:rgba(180,180,180,0.2);
+    box-shadow: 1px 1px 2px 0.5px rgba(200,200,200,0.5);
+    border:none;
+    margin-right:5px;
+}
+.btn:hover{
+ color: #333;
+  text-shadow: none;
+}

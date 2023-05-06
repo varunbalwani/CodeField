@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <div class="col-8 offset-2 " style="font-family: consolas;">
+            <h2 class="text-white" >Some Important Topics To Learn</h2>
+            <div class="card mb-3 ">
+                <div class="card-body">
+                    <a href="https://www.geeksforgeeks.org/binary-search/" class="card-text btn " id="materiallist" style="font-size: 18px;" >Binary Search</a>
+                </div>
+            </div>
+            <div class="card mb-3 ">
+                <div class="card-body">
+                    <a href="https://www.geeksforgeeks.org/number-theory-competitive-programming/" class="card-text btn " id="materiallist" style="font-size: 18px;" >Number Theory</a>
+                </div>
+            </div>
+            <div class="card mb-3 ">
+                <div class="card-body">
+                    <a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" class="card-text btn " id="materiallist" style="font-size: 18px;" >Graphs</a>
+                </div>
+            </div>
+            <div class="card mb-3 ">
+                <div class="card-body">
+                    <a href="https://www.geeksforgeeks.org/dynamic-programming/" class="card-text btn " id="materiallist" style="font-size: 18px;" >Dynamic Programming</a>
+                </div>
+            </div>
+            <% allmaterial.forEach(function(material){ %>
+                <div class="card mb-3 ">
+                    <div class="card-body">
+                        <a href="<%= material.linkToTopic %>" class="card-text btn " id="materiallist" style="font-size: 18px;" ><%= material.Topic %></a>
+                    </div>
+                </div>
+
+            <% }); %>
+            <div class="container">
+                <h3 style="text-align: center; color:  white;">Didn't find the topic you are looking for?<br> Feel free to tell us your suggestions!</h3>
+                <p style="text-align: center;">
+                    <a href="material/addsuggestions" class="btn text-white" style="background-color: rgb(8, 71, 230);">Suggest Us!</a>
+                </p>
+                <p style="text-align: center;">
+                    <a href="material/addMaterial" class="btn text-white " style="background-color: rgb(8, 71, 230);"">Add Material</a>
+                </p>    
+            </div>
+        </div>
+    </div>
+   

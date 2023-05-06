@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>  
+
+<div class="row" style="font-family: consolas;">
+    <h1 class="text-center" style="color: rgb(255, 255, 255) ;
+    -webkit-text-fill-color: rgb(255, 255, 255) ;">Start New Discussion</h1>
+    <div class="col-6 offset-3">
+        <form action="/discussions" method="POST" >
+            <div class="mb-3">
+                <label class="form-label" for="topic" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Topic</label>
+                <input class="form-control" type="text" id="topic" name="topic" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="question" style="color: rgb(255, 255, 255) ;
+                -webkit-text-fill-color: rgb(255, 255, 255) ;">Question</label>
+                <textarea class="form-control" type="text" id="question" name="question" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>      
+            <button class="mb-3 btn btn-success">Submit</button>
+        </form>
+        <a class="mb-3 btn btn-dark" href="/discussions">Back to Discussion</a>
+    </div>
+</div>
+
