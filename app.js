@@ -19,7 +19,7 @@ const MongoDBStore = require('connect-mongo');
 const seedDB = require("./seed");
 const ejsMate = require('ejs-mate');
 
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/CodeFarm';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/CodeField';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     //useCreateIndex: true,
